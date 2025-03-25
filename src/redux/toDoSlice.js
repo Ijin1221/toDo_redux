@@ -15,10 +15,8 @@ const toDoSlice = createSlice({
         completed: false,
       };
       state.items.push(inputItemDetails);
-      console.log(state);
     },
     deleteItem: (state, action) => {
-      console.log(action.payload);
       state.items = state.items.filter((item) => item.id !== action.payload);
     },
     toggleComplete: (state, action) => {
@@ -26,8 +24,6 @@ const toDoSlice = createSlice({
       if (findItems) {
         findItems.completed = !findItems.completed;
       }
-      console.log(state);
-      
     },
   },
 });
